@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chronicle AI Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6;
+      }
+      /* ProseMirror specific styles ensuring the editor looks good */
+      .ProseMirror {
+        outline: none;
+        min-height: 400px;
+        font-family: 'Merriweather', serif;
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: #374151;
+      }
+      .ProseMirror p {
+        margin-bottom: 1em;
+      }
+      .ProseMirror:focus {
+        outline: none;
+      }
+      /* Placeholder simulation if needed, though ProseMirror handles this differently usually */
+      .ProseMirror p.is-editor-empty:first-child::before {
+        content: attr(data-placeholder);
+        float: left;
+        color: #9ca3af;
+        pointer-events: none;
+        height: 0;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "prosemirror-view": "https://aistudiocdn.com/prosemirror-view@^1.41.3",
+    "prosemirror-model": "https://aistudiocdn.com/prosemirror-model@^1.25.4",
+    "prosemirror-history": "https://aistudiocdn.com/prosemirror-history@^1.5.0",
+    "prosemirror-schema-basic": "https://aistudiocdn.com/prosemirror-schema-basic@^1.2.4",
+    "@xstate/react": "https://aistudiocdn.com/@xstate/react@^6.0.0",
+    "prosemirror-state": "https://aistudiocdn.com/prosemirror-state@^1.4.4",
+    "prosemirror-commands": "https://aistudiocdn.com/prosemirror-commands@^1.7.1",
+    "xstate": "https://aistudiocdn.com/xstate@^5.24.0",
+    "prosemirror-keymap": "https://aistudiocdn.com/prosemirror-keymap@^1.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

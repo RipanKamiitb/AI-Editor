@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Chronicle AI Editor",
+  "description": "An AI-assisted text editor using ProseMirror, XState, and Google Gemini API.",
+  "requestFramePermissions": []
+}
